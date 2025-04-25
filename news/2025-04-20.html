@@ -62,23 +62,23 @@
               <a class="lang lang-en" style="display: none;" href="opensource.html"> Open Source</a>
             </li>
             <li class="menu-item">
-              <a class="lang lang-zh" style="display: block;" href="../contact.html">联系我们</a>
-              <a class="lang lang-en" style="display: none;" href="../contact.html">Contact</a>
+              <a class="lang lang-zh" style="display: block;" href="../contact.html">关于我们</a>
+              <a class="lang lang-en" style="display: none;" href="../contact.html">About Us</a>
             </li>
             <li class="menu-item">
-              <a id="languageButton", onclick="switchLanguage()" style="cursor: pointer;">ZH</a>
+              <a id="languageButton" , onclick="switchLanguage()" style="cursor: pointer;">ZH</a>
             </li>
           </ul>
 
         </div>
       </div>
     </div>
-</header>
- 
+  </header>
+
   <!-- partial -->
 
   <!-- partial:partia/__subheader.html -->
-  
+
   <!-- partial -->
 
   <!-- Post Content Start -->
@@ -95,20 +95,25 @@
               </div>
               <h2 class="entry-title">Professor Ooi Beng Chin honoured Fellow of the China Computer Federation</h2>
               <div class="sigma_post-meta">
-                <a > <i class="far fa-calendar"></i> 2025-04-20</a>
+                <a> <i class="far fa-calendar"></i> 2025-04-20</a>
               </div>
               <h5>Professor Ooi Beng Chin has been elected as Fellow of the China Computer Federation (CCF)</h5>
               <p>
-                Awarded by CCF, this distinction represents the highest honour which supports the academic and professional advancement of computing professionals worldwide.
+                Awarded by CCF, this distinction represents the highest honour which supports the academic and
+                professional advancement of computing professionals worldwide.
               </p>
-                <img src="https://www.comp.nus.edu.sg/~dbsystem/static/c1fc28c888e2cb53d021e13a605aa944/27179/pic.png" alt="post">
+              <img src="https://www.comp.nus.edu.sg/~dbsystem/static/c1fc28c888e2cb53d021e13a605aa944/27179/pic.png"
+                alt="post">
               <p>
-                With only 180 CCF Fellows selected globally, Professor Ooi’s achievement demonstrates his outstanding contribution to the field of computing. This recognition not only reflects his dedication to pushing the frontiers of technology but also reinforces our leadership in research and innovation on the global stage.
+                With only 180 CCF Fellows selected globally, Professor Ooi’s achievement demonstrates his outstanding
+                contribution to the field of computing. This recognition not only reflects his dedication to pushing the
+                frontiers of technology but also reinforces our leadership in research and innovation on the global
+                stage.
               </p>
-            
+
             </div>
 
-        
+
             <!-- Post Pagination Start -->
             <div class="section">
 
@@ -117,7 +122,7 @@
 
             <!-- Related Posts End -->
 
-            
+
 
           </div>
         </div>
@@ -154,31 +159,31 @@
       const savedLanguage = localStorage.getItem('language') || 'zh'; // 默认语言为英文
       setLanguage(savedLanguage);
     });
-  
+
     // 切换语言
     function switchLanguage() {
       const currentLanguage = localStorage.getItem('language') || 'zh';
       const newLanguage = currentLanguage === 'en' ? 'zh' : 'en';
-  
+
       // 保存语言到 localStorage
       localStorage.setItem('language', newLanguage);
-  
+
       // 更新页面语言
       setLanguage(newLanguage);
     }
-  
+
     // 设置语言
     function setLanguage(lang) {
       // 隐藏所有语言内容
       document.querySelectorAll('.lang').forEach(function (el) {
         el.style.display = 'none';
       });
-  
+
       // 显示选定语言的内容
       document.querySelectorAll('.lang-' + lang).forEach(function (el) {
         el.style.display = 'block';
       });
-  
+
       // 更新按钮文本
       const languageButton = document.getElementById('languageButton');
       if (languageButton) {
